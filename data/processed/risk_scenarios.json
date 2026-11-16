@@ -1,0 +1,41 @@
+{
+  "source": "PolyFinances starter pack: Yahoo Finance via yfinance, FX Bank of Canada Valet, retrieved 2026-11-13",
+  "devise": "CAD",
+  "fenetre": [
+    "2021-11-12",
+    "2026-11-12"
+  ],
+  "methode": "adj_close converti en CAD, rééquilibrage trimestriel, baisse maximale du sommet au creux",
+  "scenarios": {
+    "reference_equilibre": {
+      "label": "60 % actions, 40 % obligations",
+      "weights": {
+        "XIU.TO": 0.3,
+        "SPY": 0.3,
+        "XBB.TO": 0.4
+      },
+      "baisse_max": -0.1489,
+      "sommet": "2021-12-29",
+      "creux": "2022-06-16",
+      "duree_baisse_jours": 169,
+      "retour_au_sommet": "2023-12-13",
+      "duree_totale_sous_le_sommet_jours": 714,
+      "perte_sur_10000": 1489
+    },
+    "actions": {
+      "label": "100 % actions",
+      "weights": {
+        "XIU.TO": 0.4,
+        "SPY": 0.4,
+        "QQQ": 0.2
+      },
+      "baisse_max": -0.1944,
+      "sommet": "2021-12-29",
+      "creux": "2022-06-16",
+      "duree_baisse_jours": 169,
+      "retour_au_sommet": "2023-07-18",
+      "duree_totale_sous_le_sommet_jours": 566,
+      "perte_sur_10000": 1944
+    }
+  }
+}

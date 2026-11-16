@@ -1,0 +1,202 @@
+/* ==========================================================================================
+   Thème « Blanc et rouge BNC » (v18)
+   Couleurs uniquement : ce fichier ne contient QUE des propriétés de couleur (color,
+   background, border-*-color, outline-color, box-shadow, text-shadow, filter d'ombre,
+   accent-color, fill, stroke et variables de couleur). Aucune taille, marge, bordure,
+   position ni typographie n'est modifiée : la mise en page de global.css est intacte.
+   Vérifié par scripts/check-theme-colors-only.mjs.
+
+   Jetons repris du site BNC Courtage direct (nbc.ca/fr/courtage-direct, --idt__color-*),
+   consultés le 2026-11-14 :
+     rouge #de161d (action, survol #ba1218), noir #000, texte #333 / secondaire #585858,
+     surfaces #f6f6f6 / #ededed, sable #f7f4f0, bordures #b5b5b5 / #dadada,
+     danger #ba1218 sur #fbdadb, vert #3e6246 (hausses), corail #f27059.
+   Retirer ce fichier (et son import dans main.tsx) rétablit les couleurs précédentes.
+   ========================================================================================== */
+
+:root {
+  --bnc-red: #de161d;
+  --bnc-red-dark: #ba1218;
+  --bnc-black: #000000;
+  --bnc-text-2: #333333;
+  --bnc-text-muted: #585858;
+  --bnc-surface: #f6f6f6;
+  --bnc-surface-2: #ededed;
+  --bnc-sand: #f7f4f0;
+  --bnc-border: #b5b5b5;
+  --bnc-border-light: #dadada;
+  --bnc-danger-bg: #fbdadb;
+  --bnc-coral: #f27059;
+  --bnc-flat: #7d7d7d;
+  /* Variables déjà utilisées par global.css et les composants */
+  --green: #3e6246;
+  --red: #ba1218;
+  --ink: #000000;
+  --bg: #f6f6f6;
+  --card: #ffffff;
+  --muted: #585858;
+}
+
+/* ---------- Fond général et coquille ---------- */
+body { background: #ffffff; color: var(--bnc-black); }
+.app-shell { background: #ffffff; }
+.app-main { background: #ffffff; color: var(--bnc-black); }
+.disclaimer { color: var(--bnc-black); text-shadow: none; }
+
+/* ---------- Fil : cartes claires teintées par la couleur du produit ---------- */
+.reel {
+  color: var(--bnc-black);
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--brand) 20%, #ffffff) 0%,
+    color-mix(in srgb, var(--brand) 7%, #ffffff) 60%,
+    #ffffff 100%
+  );
+}
+.reel::after { background: linear-gradient(to top, rgba(255, 255, 255, 0.6), transparent 40%); }
+.reel__panel { background: rgba(255, 255, 255, 0.96); box-shadow: inset 0 0 0 1px var(--bnc-border-light); }
+.card-meta,
+.action-rail { text-shadow: none; }
+.rail-btn { color: var(--bnc-black); text-shadow: none; }
+.rail-btn svg { filter: none; }
+.link-btn { color: var(--bnc-black); }
+.rating-btn__icon { background: transparent; }
+.rating-btn--on .rating-btn__icon { color: #ffffff; }
+.rating-badge--up { background: rgba(62, 98, 70, 0.12); color: #3e6246; }
+.rating-badge--down { background: rgba(186, 18, 24, 0.1); color: #ba1218; }
+.card-meta__ticker .rating-badge { background: rgba(255, 255, 255, 0.85); }
+.card-meta__ticker .rating-badge--up { color: #3e6246; }
+.card-meta__ticker .rating-badge--down { color: #ba1218; }
+.burst { color: var(--bnc-red); }
+.swipe-hint { color: var(--bnc-black); text-shadow: none; }
+.empty-state { color: var(--bnc-black); }
+.empty-state .primary-btn { background: var(--bnc-red); color: #ffffff; }
+.page-light .link-btn { color: var(--bnc-red); }
+.primary-btn { background: var(--bnc-red); color: #ffffff; }
+
+/* ---------- Focus visible (contraste sur fond clair) ---------- */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+h2:focus-visible {
+  outline-color: var(--bnc-black);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.85);
+}
+.reel__panel :focus-visible,
+.page-light :focus-visible,
+.sheet :focus-visible { outline-color: var(--bnc-black); box-shadow: none; }
+
+/* ---------- Barre d'onglets ---------- */
+.tab-bar { background: #ffffff; border-top-color: var(--bnc-border-light); }
+.tab-bar__item { color: var(--bnc-text-muted); }
+.tab-bar__item--active { color: var(--bnc-red); }
+
+/* ---------- Profil ---------- */
+.profile-page,
+.wizard {
+  --line: #dadada;
+  --surface: #f6f6f6;
+  --soft: #585858;
+  background: #ffffff;
+  color: var(--bnc-black);
+}
+.profile-head__avatar { background: var(--bnc-red); color: #ffffff; }
+.profile-head__new { background: var(--bnc-red); color: #ffffff; }
+.segmented__tab { color: var(--bnc-black); }
+.segmented__tab--on { background: var(--bnc-black); color: #ffffff; }
+.pf-card {
+  background: linear-gradient(160deg, var(--bnc-surface) 0%, #ffffff 85%);
+  color: var(--bnc-black);
+  box-shadow: inset 0 0 0 1px var(--bnc-border-light);
+}
+.pf-card--active { box-shadow: inset 0 0 0 2px var(--bnc-red); }
+.pf-card__badge { background: var(--bnc-red); color: #ffffff; }
+.pf-card__activate,
+.pf-card__edit { border-color: var(--bnc-border); background: #ffffff; color: var(--bnc-black); }
+.pf-card__total { border-top-color: var(--bnc-border-light); }
+.pf-card__icon { background: rgba(0, 0, 0, 0.07); }
+.pf-split__cash { background: rgba(0, 0, 0, 0.16); }
+.pf-split__assets { background: var(--bnc-black); }
+.pf-split__dot--assets { background: var(--bnc-black); }
+.pf-split__dot--cash { background: rgba(0, 0, 0, 0.16); }
+.pos-row { border-bottom-color: rgba(0, 0, 0, 0.08); }
+.pos-row__logo-placeholder { background: rgba(0, 0, 0, 0.1); }
+.pos-row__unconfirmed { color: #8a5a00; }
+.pos-list__more { color: var(--bnc-black); }
+.pf-card__chart { color: var(--bnc-black); }
+.pf-card__grid div { background: rgba(0, 0, 0, 0.05); }
+.risk-dots span { background: var(--bnc-border-light); }
+.risk-dots--balanced .risk-dots__on { background: var(--bnc-coral); }
+.pf-dots__dot::after { background: var(--bnc-border); }
+.pf-dots__dot--on::after { background: var(--bnc-black); }
+.dashed-btn { border-color: var(--bnc-border); color: var(--bnc-black); }
+
+/* Profil investisseur et formulaires */
+.investor__scope { background: var(--bnc-sand); color: var(--bnc-text-2); }
+.acc--open { box-shadow: inset 0 0 0 1px var(--bnc-border); }
+.acc__toggle { color: var(--bnc-black); }
+.acc__summary--todo { color: var(--bnc-red-dark); }
+.choice { border-color: var(--bnc-border); color: var(--bnc-black); }
+.choice:has(input:focus-visible) { outline-color: var(--bnc-black); }
+.choice--on { background: var(--bnc-black); color: #ffffff; border-color: var(--bnc-black); }
+.text-input { border-color: var(--bnc-border); background: #ffffff; color: var(--bnc-black); }
+.text-input[aria-invalid='true'] { border-color: var(--bnc-red-dark); }
+.field-error { color: var(--bnc-red-dark); }
+.field-count { background: var(--bnc-danger-bg); color: var(--bnc-red-dark); }
+.light-btn { background: var(--bnc-red); color: #ffffff; }
+.ghost-btn { border-color: var(--bnc-border); color: var(--bnc-black); }
+.stepper { border-color: var(--bnc-border); }
+.stepper button { color: var(--bnc-black); }
+.switch { background: var(--bnc-border); }
+.switch--on { background: var(--green); }
+
+/* Questionnaire de portefeuille */
+.wizard__back { color: var(--bnc-black); }
+.wizard__progress span { background: var(--bnc-border-light); }
+.wizard__progress .on { background: var(--bnc-red); }
+.range { accent-color: var(--bnc-red); }
+.risk-option--on { border-color: var(--bnc-black); }
+.risk-option--on::before { border-color: var(--bnc-black); background: radial-gradient(var(--bnc-black) 0 4px, transparent 5px); }
+.risk-option:has(input:focus-visible) { outline-color: var(--bnc-black); }
+.suggestion { background: var(--bnc-sand); color: var(--bnc-text-2); }
+.suggestion__title { color: var(--bnc-black); }
+.suggestion__reason { color: var(--bnc-text-muted); }
+.danger-link { color: var(--bnc-red-dark); }
+.danger-link--confirm { color: #ffffff; background: var(--bnc-red-dark); }
+.icon-choice { border-color: var(--bnc-border); color: var(--bnc-black); }
+.icon-choice:has(input:focus-visible) { outline-color: var(--bnc-black); }
+.icon-choice--on { background: var(--bnc-black); color: #ffffff; border-color: var(--bnc-black); }
+
+/* ---------- Sélecteur de portefeuille ---------- */
+.pf-switch { color: var(--bnc-black); }
+.pf-switch:focus-within { outline-color: var(--bnc-black); }
+.pf-switch--overlay { background: rgba(255, 255, 255, 0.8); }
+.pf-switch--inline { background: var(--bnc-surface); }
+
+/* ---------- Sauvegardés ---------- */
+.saved-page {
+  --line: #dadada;
+  --surface: #f6f6f6;
+  --soft: #585858;
+  background: #ffffff;
+  color: var(--bnc-black);
+}
+.saved-search:focus-within { outline-color: var(--bnc-black); }
+.saved-search input { color: var(--bnc-black); }
+.chip { color: var(--bnc-black); }
+.chip--active { background: var(--bnc-black); color: #ffffff; border-color: var(--bnc-black); }
+.saved-row__slide { background: #ffffff; }
+.saved-row__main:hover { background: var(--bnc-surface); }
+a.saved-row__main { color: var(--bnc-black); }
+.saved-row__pill { color: #ffffff; }
+.saved-row__pill--flat { background: var(--bnc-text-muted); }
+.saved-empty__cta { background: var(--bnc-red); color: #ffffff; }
+
+/* ---------- Messages (toasts) ---------- */
+.toast { background: var(--bnc-black); color: #ffffff; }
+.toast__action { background: var(--bnc-red); color: #ffffff; }
+.toast :focus-visible { outline-color: #ffffff; }
+
+/* ---------- Panneau du bas : liste des positions ---------- */
+.sheet .pos-row { border-bottom-color: #e3e5e8; }
+.sheet .pos-list__more { color: var(--ink); }

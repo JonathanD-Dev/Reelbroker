@@ -1,0 +1,61 @@
+asset_id,ticker,name,asset_class,market,currency,sector
+X01,BMO.TO,Bank of Montreal,equity,TSX,CAD,Financials
+X02,BNS.TO,Bank of Nova Scotia,equity,TSX,CAD,Financials
+X03,CM.TO,Canadian Imperial Bank of Commerce,equity,TSX,CAD,Financials
+X04,NA.TO,National Bank of Canada,equity,TSX,CAD,Financials
+X05,SU.TO,Suncor Energy,equity,TSX,CAD,Energy
+X06,CP.TO,Canadian Pacific Kansas City,equity,TSX,CAD,Industrials
+X07,BCE.TO,BCE,equity,TSX,CAD,Communication Services
+X08,T.TO,TELUS,equity,TSX,CAD,Communication Services
+X09,SLF.TO,Sun Life Financial,equity,TSX,CAD,Financials
+X10,TRI.TO,Thomson Reuters,equity,TSX,CAD,Industrials
+X11,WCN.TO,Waste Connections,equity,TSX,CAD,Industrials
+X12,NTR.TO,Nutrien,equity,TSX,CAD,Materials
+X13,AEM.TO,Agnico Eagle Mines,equity,TSX,CAD,Materials
+X14,ABX.TO,Barrick Mining,equity,TSX,CAD,Materials
+X15,L.TO,Loblaw Companies,equity,TSX,CAD,Consumer Staples
+X16,DOL.TO,Dollarama,equity,TSX,CAD,Consumer Staples
+X17,QSR.TO,Restaurant Brands International,equity,TSX,CAD,Consumer Discretionary
+X18,GIB-A.TO,CGI (Class A),equity,TSX,CAD,Information Technology
+X19,POW.TO,Power Corporation of Canada,equity,TSX,CAD,Financials
+X20,IFC.TO,Intact Financial,equity,TSX,CAD,Financials
+X21,V,Visa,equity,NYSE/NASDAQ,USD,Financials
+X22,MA,Mastercard,equity,NYSE/NASDAQ,USD,Financials
+X23,UNH,UnitedHealth Group,equity,NYSE/NASDAQ,USD,Health Care
+X24,HD,Home Depot,equity,NYSE/NASDAQ,USD,Consumer Discretionary
+X25,KO,Coca-Cola,equity,NYSE/NASDAQ,USD,Consumer Staples
+X26,PEP,PepsiCo,equity,NYSE/NASDAQ,USD,Consumer Staples
+X27,COST,Costco Wholesale,equity,NYSE/NASDAQ,USD,Consumer Staples
+X28,WMT,Walmart,equity,NYSE/NASDAQ,USD,Consumer Staples
+X29,LLY,Eli Lilly,equity,NYSE/NASDAQ,USD,Health Care
+X30,ABBV,AbbVie,equity,NYSE/NASDAQ,USD,Health Care
+X31,MRK,Merck & Co.,equity,NYSE/NASDAQ,USD,Health Care
+X32,AVGO,Broadcom,equity,NYSE/NASDAQ,USD,Information Technology
+X33,ORCL,Oracle,equity,NYSE/NASDAQ,USD,Information Technology
+X34,CRM,Salesforce,equity,NYSE/NASDAQ,USD,Information Technology
+X35,META,Meta Platforms,equity,NYSE/NASDAQ,USD,Communication Services
+X36,NFLX,Netflix,equity,NYSE/NASDAQ,USD,Communication Services
+X37,AMD,Advanced Micro Devices,equity,NYSE/NASDAQ,USD,Information Technology
+X38,DIS,Walt Disney,equity,NYSE/NASDAQ,USD,Communication Services
+X39,MCD,McDonald's,equity,NYSE/NASDAQ,USD,Consumer Discretionary
+X40,BRK-B,Berkshire Hathaway (Class B),equity,NYSE/NASDAQ,USD,Financials
+X41,CAT,Caterpillar,equity,NYSE/NASDAQ,USD,Industrials
+X42,NEE,NextEra Energy,equity,NYSE/NASDAQ,USD,Utilities
+X43,LIN,Linde,equity,NYSE/NASDAQ,USD,Materials
+X44,UNP,Union Pacific,equity,NYSE/NASDAQ,USD,Industrials
+X45,ADBE,Adobe,equity,NYSE/NASDAQ,USD,Information Technology
+X46,VFV.TO,Vanguard S&P 500 Index ETF (CAD),etf_equity,TSX,CAD,Broad market (U.S.)
+X47,XEQT.TO,iShares Core Equity ETF Portfolio (global),etf_equity,TSX,CAD,Broad market (Global)
+X48,VCN.TO,Vanguard FTSE Canada All Cap Index ETF,etf_equity,TSX,CAD,Broad market (Canada)
+X49,XEF.TO,iShares Core MSCI EAFE IMI Index ETF,etf_equity,TSX,CAD,Broad market (International developed)
+X50,XRE.TO,iShares S&P/TSX Capped REIT Index ETF,etf_equity,TSX,CAD,Real estate (Canada)
+X51,ZAG.TO,BMO Aggregate Bond Index ETF,etf_bond,TSX,CAD,Bonds (Canada aggregate)
+X52,IEFA,iShares Core MSCI EAFE ETF,etf_equity,NYSE/NASDAQ,USD,Broad market (International developed)
+X53,EEM,iShares MSCI Emerging Markets ETF,etf_equity,NYSE/NASDAQ,USD,Broad market (Emerging markets)
+X54,VNQ,Vanguard Real Estate ETF,etf_equity,NYSE/NASDAQ,USD,Real estate (U.S.)
+X55,SCHD,Schwab U.S. Dividend Equity ETF,etf_equity,NYSE/NASDAQ,USD,Broad market (U.S. dividend)
+X56,VIG,Vanguard Dividend Appreciation ETF,etf_equity,NYSE/NASDAQ,USD,Broad market (U.S. dividend growth)
+X57,ICLN,iShares Global Clean Energy ETF,etf_equity,NYSE/NASDAQ,USD,Thematic (Clean energy)
+X58,BND,Vanguard Total Bond Market ETF,etf_bond,NYSE/NASDAQ,USD,Bonds (U.S. aggregate)
+X59,SHY,iShares 1-3 Year Treasury Bond ETF,etf_bond,NYSE/NASDAQ,USD,Bonds (U.S. short Treasury)
+X60,IEF,iShares 7-10 Year Treasury Bond ETF,etf_bond,NYSE/NASDAQ,USD,Bonds (U.S. intermediate Treasury)

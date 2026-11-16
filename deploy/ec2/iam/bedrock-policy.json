@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "GlobalInferenceProfile",
+      "Effect": "Allow",
+      "Action": ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"],
+      "Resource": "arn:aws:bedrock:__REGION__:__ACCOUNT_ID__:inference-profile/global.__MODEL_NAME__",
+      "Condition": { "StringEquals": { "aws:RequestedRegion": "__REGION__" } }
+    },
+    {
+      "Sid": "RegionalModelThroughProfile",
+      "Effect": "Allow",
+      "Action": ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"],
+      "Resource": "arn:aws:bedrock:__REGION__::foundation-model/__MODEL_NAME__",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "__REGION__",
+          "bedrock:InferenceProfileArn": "arn:aws:bedrock:__REGION__:__ACCOUNT_ID__:inference-profile/global.__MODEL_NAME__"
+        }
+      }
+    },
+    {
+      "Sid": "GlobalModelThroughProfile",
+      "Effect": "Allow",
+      "Action": ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"],
+      "Resource": "arn:aws:bedrock:::foundation-model/__MODEL_NAME__",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "unspecified",
+          "bedrock:InferenceProfileArn": "arn:aws:bedrock:__REGION__:__ACCOUNT_ID__:inference-profile/global.__MODEL_NAME__"
+        }
+      }
+    }
+  ]
+}

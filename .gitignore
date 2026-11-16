@@ -1,0 +1,78 @@
+# .gitignore de ReelBroker
+# Règle : on publie le code, la documentation et les données qui ont le droit d'être republiées.
+# On ne publie jamais : secrets, identifiants et adresses de notre infrastructure AWS, données des utilisateurs,
+# fichiers régénérés, données des organisateurs soumises à licence. Lancer en local : voir LANCER-EN-LOCAL.md.
+
+# ---------- Secrets et identifiants ----------
+# Clés AWS / Bedrock. Seul le modèle sans valeur est publié.
+.env
+.env.*
+!.env.example
+web/.env
+web/.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.htpasswd
+credentials
+credentials.json
+.aws/
+
+# ---------- Infrastructure déployée ----------
+# Identifiants réels du compte AWS, de l'instance, de l'adresse IP, de CloudFront et du compartiment S3.
+# deploy/ec2/README.md (générique, sans identifiant) reste publié.
+deploy/ec2/DEPLOYED.md
+deploy/**/*.tar.gz
+deploy/**/*.local.*
+
+# ---------- Données des utilisateurs et sauvegardes ----------
+# Profils (réponses au questionnaire, réactions, journal des décisions) et copies de sauvegarde.
+# L'API recrée outputs/profiles.json au premier démarrage, avec les trois personas.
+outputs/
+
+# ---------- Données des organisateurs (licence : pas de republication) ----------
+# Jeu de départ du datathon : à placer à la main (LANCER-EN-LOCAL.md, étape 3). Le dossier vide reste publié.
+data/raw/*
+!data/raw/.gitkeep
+# Énoncé, présentations et ateliers officiels du cas (documents des organisateurs, images extraites comprises)
+docs/given/
+Datathon - Case Officiel*.pdf
+Presentation_AlphaForge_AI_Participants*.pptx
+
+# ---------- Fichiers régénérés ----------
+# Textes Bedrock et cours téléchargés : recréés à la demande (data/cache/pipeline coûte des appels Bedrock à régénérer).
+data/cache/
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+# Interface (Node, Vite, TypeScript)
+node_modules/
+web/dist/
+web/.vite/
+*.tsbuildinfo
+coverage/
+*.log
+npm-debug.log*
+
+# ---------- Archives et copies locales du projet ----------
+*.zip
+*.tar.gz
+_archive-*/
+
+# ---------- Fichiers propres à un poste ou à un éditeur ----------
+# .claude/ contient des chemins locaux (nom d'utilisateur Windows).
+.claude/
+.kiro/settings/
+.vscode/
+.idea/
+*.stackdump
+.DS_Store
+Thumbs.db
+desktop.ini

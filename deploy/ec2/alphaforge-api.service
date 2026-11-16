@@ -1,0 +1,29 @@
+[Unit]
+Description=ReelBroker API (FastAPI, uvicorn sur 127.0.0.1:8000)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=alphaforge
+Group=alphaforge
+# L'application lit ses données par chemins relatifs : elle doit tourner depuis la racine du projet.
+WorkingDirectory=/opt/alphaforge
+# AWS_REGION, BEDROCK_USE_IAM_ROLE=true, BEDROCK_MODEL_ID (écrit par install.sh). Aucune clé : le rôle IAM de l'instance.
+EnvironmentFile=/etc/alphaforge/alphaforge.env
+Environment=PYTHONUNBUFFERED=1
+Environment=HOME=/var/lib/alphaforge
+ExecStart=/opt/alphaforge/.venv/bin/python scripts/serve_api.py --port 8000
+Restart=on-failure
+RestartSec=5
+
+# Durcissement : seuls les profils (outputs/) et le cache (data/cache/) sont modifiables.
+StateDirectory=alphaforge
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/alphaforge/outputs /opt/alphaforge/data/cache
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,656 @@
+{
+ "account_order": [
+  "C1",
+  "C1a",
+  "C2",
+  "C2a",
+  "C3",
+  "C4",
+  "C4a",
+  "C6",
+  "C5"
+ ],
+ "portfolio_order": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P4f",
+  "P4a_when",
+  "P4a_share",
+  "P5",
+  "P5a"
+ ],
+ "questions": {
+  "C1": {
+   "id": "C1",
+   "level": "compte",
+   "type": "single",
+   "element": "Type de revenu et stabilité",
+   "text": "Comment décririez-vous votre principale source de revenu ?",
+   "choices": [
+    {
+     "code": "permanent",
+     "label": "Emploi permanent, revenu régulier"
+    },
+    {
+     "code": "contract",
+     "label": "Emploi contractuel ou temporaire"
+    },
+    {
+     "code": "self_employed",
+     "label": "Travail autonome ou à la commission"
+    },
+    {
+     "code": "pension",
+     "label": "Retraite ou pension"
+    },
+    {
+     "code": "none_regular",
+     "label": "Études ou pas de revenu régulier"
+    },
+    {
+     "code": "other",
+     "label": "Autre"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas ou je préfère ne pas répondre"
+    }
+   ]
+  },
+  "C1a": {
+   "id": "C1a",
+   "level": "compte",
+   "type": "single",
+   "element": "Stabilité du revenu",
+   "text": "Vos revenus sont-ils semblables d'un mois à l'autre ?",
+   "choices": [
+    {
+     "code": "stable",
+     "label": "Oui, assez semblables"
+    },
+    {
+     "code": "variable",
+     "label": "Ils varient un peu"
+    },
+    {
+     "code": "low",
+     "label": "Ils varient beaucoup"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C2": {
+   "id": "C2",
+   "level": "compte",
+   "type": "single",
+   "element": "Marge de manœuvre",
+   "text": "En comptant vos obligations (logement, dettes, personnes à charge), pendant combien de temps pourriez-vous payer vos dépenses sans revenu et sans toucher à vos placements ?",
+   "choices": [
+    {
+     "code": "lt_1m",
+     "label": "Moins de 1 mois"
+    },
+    {
+     "code": "1_3m",
+     "label": "De 1 à 3 mois"
+    },
+    {
+     "code": "3_6m",
+     "label": "De 3 à 6 mois"
+    },
+    {
+     "code": "gt_6m",
+     "label": "Plus de 6 mois"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C2a": {
+   "id": "C2a",
+   "level": "compte",
+   "type": "multi",
+   "element": "Obligations financières",
+   "text": "Lesquelles de ces obligations s'appliquent à vous ?",
+   "choices": [
+    {
+     "code": "dependents",
+     "label": "Personnes à charge"
+    },
+    {
+     "code": "housing",
+     "label": "Loyer ou hypothèque"
+    },
+    {
+     "code": "debt",
+     "label": "Dettes autres que l'hypothèque"
+    },
+    {
+     "code": "family_support",
+     "label": "Soutien financier à un proche"
+    },
+    {
+     "code": "none",
+     "label": "Aucune de ces obligations"
+    },
+    {
+     "code": "unknown",
+     "label": "Je préfère ne pas répondre"
+    }
+   ]
+  },
+  "C3": {
+   "id": "C3",
+   "level": "compte",
+   "type": "single",
+   "element": "Expérience en placement",
+   "text": "Quelle est votre expérience des placements ?",
+   "choices": [
+    {
+     "code": "none",
+     "label": "Aucune, je débute"
+    },
+    {
+     "code": "beginner",
+     "label": "J'ai des placements, mais quelqu'un d'autre les choisit"
+    },
+    {
+     "code": "intermediate",
+     "label": "J'ai déjà choisi moi-même des actions ou des fonds"
+    },
+    {
+     "code": "advanced",
+     "label": "J'investis moi-même régulièrement depuis plusieurs années"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C4": {
+   "id": "C4",
+   "level": "compte",
+   "type": "multi",
+   "element": "Valeurs et exclusions",
+   "text": "Y a-t-il des types de placements que vous souhaitez éviter pour des raisons personnelles ?",
+   "choices": [
+    {
+     "code": "fossil_fuels",
+     "label": "Énergies fossiles"
+    },
+    {
+     "code": "weapons",
+     "label": "Armement"
+    },
+    {
+     "code": "sin",
+     "label": "Tabac, alcool ou jeux de hasard"
+    },
+    {
+     "code": "controversies",
+     "label": "Entreprises visées par des controverses environnementales ou sociales importantes"
+    },
+    {
+     "code": "crypto",
+     "label": "Cryptoactifs"
+    },
+    {
+     "code": "other",
+     "label": "Autre (à préciser)"
+    },
+    {
+     "code": "none",
+     "label": "Non, aucune exclusion"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C4a": {
+   "id": "C4a",
+   "level": "compte",
+   "type": "single",
+   "element": "Poids des critères autres que le rendement",
+   "text": "Ces exclusions sont-elles une règle stricte ou une préférence ?",
+   "choices": [
+    {
+     "code": "strict",
+     "label": "Une règle stricte : à ne jamais inclure"
+    },
+    {
+     "code": "preference",
+     "label": "Une préférence : à éviter si possible"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C6": {
+   "id": "C6",
+   "level": "compte",
+   "type": "multi",
+   "element": "Thèmes d'intérêt",
+   "text": "Y a-t-il des thèmes qui vous intéressent particulièrement ?",
+   "choices": [
+    {
+     "code": "tech",
+     "label": "Technologies et intelligence artificielle"
+    },
+    {
+     "code": "crypto",
+     "label": "Cryptoactifs"
+    },
+    {
+     "code": "health",
+     "label": "Santé"
+    },
+    {
+     "code": "finance",
+     "label": "Services financiers"
+    },
+    {
+     "code": "energy",
+     "label": "Énergie"
+    },
+    {
+     "code": "gold",
+     "label": "Or"
+    },
+    {
+     "code": "none",
+     "label": "Aucun thème en particulier"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "C5": {
+   "id": "C5",
+   "level": "compte",
+   "type": "single",
+   "element": "Préférences de décision",
+   "text": "Quel niveau d'explication souhaitez-vous recevoir ?",
+   "choices": [
+    {
+     "code": "brief",
+     "label": "L'essentiel en quelques lignes"
+    },
+    {
+     "code": "standard",
+     "label": "Les points clés avec les chiffres principaux"
+    },
+    {
+     "code": "detailed",
+     "label": "Le détail complet, avec sources et hypothèses"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P1": {
+   "id": "P1",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Objectif principal",
+   "text": "À quoi cet argent doit-il servir en priorité ?",
+   "choices": [
+    {
+     "code": "preserve",
+     "label": "Préserver le capital"
+    },
+    {
+     "code": "income",
+     "label": "Générer un revenu régulier"
+    },
+    {
+     "code": "balanced",
+     "label": "Équilibrer croissance et stabilité"
+    },
+    {
+     "code": "growth",
+     "label": "Faire croître le capital à long terme"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ],
+   "help": "Préserver : éviter de perdre. Revenu : recevoir des versements réguliers. Équilibrer : croissance modérée avec moins de variations. Croissance : viser plus haut à long terme en acceptant des variations plus fortes."
+  },
+  "P2": {
+   "id": "P2",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Horizon de placement",
+   "text": "Dans combien de temps prévoyez-vous utiliser une part importante de cet argent ?",
+   "choices": [
+    {
+     "code": "lt_1y",
+     "label": "Moins de 1 an"
+    },
+    {
+     "code": "1_3y",
+     "label": "De 1 à 3 ans"
+    },
+    {
+     "code": "3_5y",
+     "label": "De 3 à 5 ans"
+    },
+    {
+     "code": "5_10y",
+     "label": "De 5 à 10 ans"
+    },
+    {
+     "code": "10_15y",
+     "label": "De 10 à 15 ans"
+    },
+    {
+     "code": "gt_15y",
+     "label": "Plus de 15 ans"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P3": {
+   "id": "P3",
+   "level": "portefeuille",
+   "type": "amount",
+   "element": "Mise initiale",
+   "text": "Quel montant prévoyez-vous placer au départ dans ce portefeuille ?",
+   "choices": [
+    {
+     "code": "lt_1k",
+     "label": "Moins de 1 000 $"
+    },
+    {
+     "code": "1k_10k",
+     "label": "De 1 000 $ à 10 000 $"
+    },
+    {
+     "code": "10k_50k",
+     "label": "De 10 000 $ à 50 000 $"
+    },
+    {
+     "code": "50k_250k",
+     "label": "De 50 000 $ à 250 000 $"
+    },
+    {
+     "code": "gt_250k",
+     "label": "Plus de 250 000 $"
+    },
+    {
+     "code": "unknown",
+     "label": "Je préfère ne pas répondre"
+    }
+   ]
+  },
+  "P4": {
+   "id": "P4",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Besoins de retrait",
+   "text": "Prévoyez-vous retirer de l'argent de ce portefeuille avant la fin de cette période ?",
+   "choices": [
+    {
+     "code": "none",
+     "label": "Non, aucun retrait prévu"
+    },
+    {
+     "code": "regular",
+     "label": "Oui, des retraits réguliers"
+    },
+    {
+     "code": "lump_sum",
+     "label": "Oui, un retrait important à une date connue"
+    },
+    {
+     "code": "contingent",
+     "label": "Peut-être, en cas d'imprévu"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P4f": {
+   "id": "P4f",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Fréquence des retraits",
+   "text": "À quelle fréquence prévoyez-vous ces retraits ?",
+   "choices": [
+    {
+     "code": "monthly",
+     "label": "Chaque mois"
+    },
+    {
+     "code": "quarterly",
+     "label": "Chaque trimestre"
+    },
+    {
+     "code": "yearly",
+     "label": "Chaque année"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P4a_when": {
+   "id": "P4a_when",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Date du retrait",
+   "text": "Quand prévoyez-vous ce retrait important ?",
+   "choices": [
+    {
+     "code": "lt_1y",
+     "label": "Moins de 1 an"
+    },
+    {
+     "code": "1_3y",
+     "label": "De 1 à 3 ans"
+    },
+    {
+     "code": "3_5y",
+     "label": "De 3 à 5 ans"
+    },
+    {
+     "code": "5_10y",
+     "label": "De 5 à 10 ans"
+    },
+    {
+     "code": "10_15y",
+     "label": "De 10 à 15 ans"
+    },
+    {
+     "code": "gt_15y",
+     "label": "Plus de 15 ans"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P4a_share": {
+   "id": "P4a_share",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Taille du retrait",
+   "text": "Quelle part du portefeuille ce retrait représente-t-il ?",
+   "choices": [
+    {
+     "code": "lt_25",
+     "label": "Moins du quart"
+    },
+    {
+     "code": "about_50",
+     "label": "Environ la moitié"
+    },
+    {
+     "code": "most",
+     "label": "Presque tout"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P5": {
+   "id": "P5",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Tolérance au risque",
+   "text": "Scénario fictif : imaginez que ce portefeuille perde 15 % en six mois. Sur 10 000 $ (montant d'illustration), cela représente une baisse d'environ 1 500 $. Que feriez-vous ?",
+   "choices": [
+    {
+     "code": "sell_all",
+     "label": "Je vendrais tout pour éviter d'autres pertes"
+    },
+    {
+     "code": "sell_part",
+     "label": "Je vendrais une partie"
+    },
+    {
+     "code": "hold",
+     "label": "Je ne changerais rien et j'attendrais"
+    },
+    {
+     "code": "add",
+     "label": "J'ajouterais de l'argent"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  },
+  "P5a": {
+   "id": "P5a",
+   "level": "portefeuille",
+   "type": "single",
+   "element": "Tolérance au risque, palier supérieur",
+   "text": "Scénario fictif : imaginez que ce portefeuille, plus exposé aux actions, perde 25 % en six mois. Sur 10 000 $ (montant d'illustration), cela représente une baisse d'environ 2 500 $. Que feriez-vous ?",
+   "choices": [
+    {
+     "code": "sell_all",
+     "label": "Je vendrais tout pour éviter d'autres pertes"
+    },
+    {
+     "code": "sell_part",
+     "label": "Je vendrais une partie"
+    },
+    {
+     "code": "hold",
+     "label": "Je ne changerais rien et j'attendrais"
+    },
+    {
+     "code": "add",
+     "label": "J'ajouterais de l'argent"
+    },
+    {
+     "code": "unknown",
+     "label": "Je ne sais pas"
+    }
+   ]
+  }
+ },
+ "personas": {
+  "amira": {
+   "id": "amira",
+   "name": "Amira",
+   "summary": "26 ans, ingénieure logicielle, risque élevé, 15 ans et plus",
+   "answers": {
+    "C1": "permanent",
+    "C2": "3_6m",
+    "C3": "intermediate",
+    "C4": [
+     "none"
+    ],
+    "C6": [
+     "tech",
+     "crypto"
+    ],
+    "C5": "standard",
+    "P1": "growth",
+    "P2": "gt_15y",
+    "P3": "skipped",
+    "P4": "none",
+    "P5": "add",
+    "P5a": "hold"
+   }
+  },
+  "mateo": {
+   "id": "mateo",
+   "name": "Mateo",
+   "summary": "41 ans, deux enfants, risque modéré, 8 à 12 ans, ESG",
+   "answers": {
+    "C1": "permanent",
+    "C2": "3_6m",
+    "C3": "intermediate",
+    "C4": [
+     "controversies",
+     "crypto"
+    ],
+    "C4a": "strict",
+    "C6": [
+     "none"
+    ],
+    "C5": "standard",
+    "P1": "balanced",
+    "P2": "5_10y",
+    "P3": "skipped",
+    "P4": "contingent",
+    "P5": "hold",
+    "P5a": "sell_part"
+   }
+  },
+  "robert": {
+   "id": "robert",
+   "name": "Robert",
+   "summary": "59 ans, retraite proche, risque faible à modéré, 3 à 5 ans",
+   "answers": {
+    "C1": "permanent",
+    "C2": "gt_6m",
+    "C3": "advanced",
+    "C4": [
+     "crypto"
+    ],
+    "C4a": "preference",
+    "C6": [
+     "none"
+    ],
+    "C5": "detailed",
+    "P1": "preserve",
+    "P2": "3_5y",
+    "P3": "skipped",
+    "P4": "contingent",
+    "P5": "hold",
+    "P5a": "sell_part"
+   }
+  }
+ }
+}
